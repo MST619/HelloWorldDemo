@@ -24,4 +24,9 @@ on:
       with:
         repository: 3thannn/DevOpsQA
         path: tests
-        token: ${{ secrets.QA_REMOTE}}
+        token: ${{ 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 }}
+        
+     - name: Begin Pytest
+        run:
+          mv ./tests/. ./
+          pytest --cov
