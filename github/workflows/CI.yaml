@@ -1,0 +1,27 @@
+name: CI for HelloWorld
+
+on:
+  push:
+    branches: [main]
+    
+ jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: action/seup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install Libraries
+      run: |
+        pip install flake8 pytest pytest-cov
+        
+    - name: Checkout Own Repo
+      uses: acions/checkout@v2
+      with:
+        repository: MST619/HelloWorldDemo
+    - name: Checkout Test Script
+      uses: actions/checkout@v2
+      with:
+        repository: 3thannn/DevOpsQA
+        path: tests
+        token: ${{ secrets.QA_REMOTE}}
