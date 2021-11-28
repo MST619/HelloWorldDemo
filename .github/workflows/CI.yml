@@ -24,7 +24,7 @@ jobs:
       with:
         repository: 3thannn/DevOpsQA
         path: tests
-        token: ${{ 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 }}
+        token: ${{ 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 }}
         
     - name: Begin Pytest
       run: |
