@@ -16,7 +16,7 @@ jobs:
         pip install flake8 pytest pytest-cov
         
     - name: Checkout Own Repo
-      uses: acions/checkout@v2
+      uses: actions/checkout@v2
       with:
         repository: MST619/HelloWorldDemo
     - name: Checkout Test Script
