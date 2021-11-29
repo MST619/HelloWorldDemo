@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: action/seup-python@v2
+    - uses: actions/setup-python@v2
       with:
         python-version: 3.8
     - name: Install Libraries
@@ -24,7 +24,7 @@ jobs:
       with:
         repository: 3thannn/DevOpsQA
         path: tests
-        token: ${{ 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 }}
+        token: ${{ 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 }}
         
     - name: Begin Pytest
       run: |
