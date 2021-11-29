@@ -1,9 +1,9 @@
 name: CI for HelloWorld
 
-on:
+on: 
   push:
     branches: [main]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,14 +17,14 @@ jobs:
         
     - name: Checkout Own Repo
       uses: actions/checkout@v2
-      with:
+      with: 
         repository: mst619/HelloWorldDemo
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
         repository: minc2/DevOpsQARepo
         path: tests
-        token: ${{ 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 }}
+        token: ${{ secrets.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 }}
         
     - name: Begin Pytest
       run: |
