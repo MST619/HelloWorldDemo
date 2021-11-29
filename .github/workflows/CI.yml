@@ -18,7 +18,7 @@ jobs:
     - name: Checkout Own Repo
       uses: actions/checkout@v2
       with:
-        repository: MST619/HelloWorldDemo
+        repository: mst619/HelloWorldDemo
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
