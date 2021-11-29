@@ -22,9 +22,9 @@ jobs:
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
-        repository: 3thannn/DevOpsQA
+        repository: minc2/DevOpsQARepo
         path: tests
-        token: ${{ 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 }}
+        token: ${{ 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 }}
         
     - name: Begin Pytest
       run: |
