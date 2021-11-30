@@ -24,7 +24,7 @@ jobs:
       with:
         repository: minc2/DevOpsQARepo
         path: tests
-        token: ${{ secrets.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 }}
+        token: ${{ secrets.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 }}
         
     - name: Begin Pytest
       run: |
@@ -36,7 +36,7 @@ jobs:
       uses: nashmaniac/create-issue-action@v1.1
       with:
           title: Build Failed
-          token: ${{secrets.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}}
+          token: ${{secrets.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}}
           assignees: ${{github.actor}}
           labels: worflow-failed
           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}       
@@ -45,6 +45,6 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.24
       if: always()
       with:
-        github_token: ${{ secrets.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 }}
+        github_token: ${{ secrets.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 }}
         files: report.xml
         
