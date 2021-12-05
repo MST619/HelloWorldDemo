@@ -22,9 +22,9 @@ jobs:
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
-        repository: mst619/DevOpsQARepo
+        repository: mstc2/DevOpsQARepo
         path: tests
-        token: ${{ secrets.QA_REMOTE }}
+        token: ${{ secrets.DEVOPSQZ_TOKEN }}
         
     - name: Begin Pytest
       run: |
@@ -36,7 +36,7 @@ jobs:
       uses: nashmaniac/create-issue-action@v1.1
       with:
           title: Build Failed
-          token: ${{secrets.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}}
+          token: ${{secrets.QA_REMOTE}}
           assignees: ${{github.actor}}
           labels: worflow-failed
           body: Workflow failed for commit ${{github.sha}} @ ${{github.ref}}       
@@ -45,6 +45,6 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.24
       if: always()
       with:
-        github_token: ${{ secrets.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 }}
+        github_token: ${{ secrets.QA_REMOTE }}
         files: report.xml
         
