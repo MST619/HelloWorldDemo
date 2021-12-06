@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Test Script
       uses: actions/checkout@v2
       with:
-        repository: mstc2/DevOpsQARepo
+        repository: minc2/DevOpsQARepo
         path: tests
         token: ${{ secrets.DEVOPSASGN1QAREPOTOKEN }}
         
